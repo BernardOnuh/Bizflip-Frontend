@@ -25,7 +25,7 @@ I migrated from React 16 to Current Version of Next.js
 
 ## Pages of Bizflip
 
-1  Start with _app.js [intro](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/_app.js) here you would find the major dependency of the project
+ 1  Start with _app.js [intro](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/_app.js) here you would find the major dependency of the project
 
 
 2. Check Out Index.js [Homae Page](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/index.js) this is how it looks like [Here](https://bizflip-o.vercel.app/)
