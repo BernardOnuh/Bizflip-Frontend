@@ -25,10 +25,15 @@ I migrated from React 16 to Current Version of Next.js
 
 ## Pages of Bizflip
 
-1 Start with _app.js [intro](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/_app.js) here you would find the major dependency of the project
+1  Start with _app.js [intro](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/_app.js) here you would find the major dependency of the project
+
+
 2. Check Out Index.js [Homae Page](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/index.js) this is how it looks like [Here](https://bizflip-o.vercel.app/)
+
 3. Check Out  Dox.js [Dox Page](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/dox.js) this page contains dox details integrated with Sumsub.
+
 4. Check Out Sell.js [Sell Page](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/sell.js) this page contain all details of selling for the The NFTs.
+
 5. Check Out  NFT-Swipe.js [Swipe Page](https://github.com/BernardOnuh/Bizflip-Frontend/blob/main/pages/nft-swipe.js) this contains the feature to buy.
 
 There are other pages, They all can be accessed [Here](https://github.com/BernardOnuh/Bizflip-Frontend/tree/main/pages)
