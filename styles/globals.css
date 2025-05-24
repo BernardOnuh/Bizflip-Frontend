@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add these to your global CSS file or use a Tailwind plugin */
+
+/* For 3D card flipping effect */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Tailwind classes using @apply */
+@layer components {
+  /* TinderCard positioning */
+  .tinder-card-container {
+    @apply relative w-full h-full max-w-md mx-auto rounded-xl overflow-hidden shadow-2xl;
+  }
+  
+  /* Card flip transitions */
+  .card-flip {
+    @apply w-full h-full transition-transform duration-700;
+    transform-style: preserve-3d;
+  }
+  
+  .card-front, .card-back {
+    @apply absolute w-full h-full;
+    backface-visibility: hidden;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Action buttons */
+  .action-button {
+    @apply font-bold py-2 px-4 rounded-full transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .offer-button {
+    @apply bg-pink-600 hover:bg-pink-700 text-white;
+  }
+  
+  .invest-button {
+    @apply bg-indigo-500 hover:bg-indigo-600 text-white;
+  }
+  
+  /* Form inputs */
+  .form-input {
+    @apply p-2 rounded bg-white/10 border border-purple-400 text-white placeholder-purple-300;
+  }
+  
+  /* Toast notifications */
+  .notification-toast {
+    @apply fixed bottom-4 right-4 p-4 rounded-lg shadow-lg text-white;
+  }
+}
+
+/* Add these styles to your CSS file or in a <style> tag in your HTML */
+
+/* Core backface styling */
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Define the card rotations for 3D effect */
+.rotate-y-0 {
+  transform: rotateY(0deg);
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Ensure proper perspective for 3D effect */
+.card-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Fix for Safari */
+@media not all and (min-resolution:.001dpcm) { 
+  @media {
+    .backface-hidden {
+      -webkit-backface-visibility: hidden !important;
+      backface-visibility: hidden !important;
+    }
+    
+    .card-container {
+      -webkit-perspective: 1000px;
+      -webkit-transform-style: preserve-3d;
+    }
+  }
+}
